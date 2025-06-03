@@ -16,7 +16,7 @@ if (!token) {
 }
 
 const bot = new TelegramBot(token, { polling: true });
-const updatesChannel = '@Opleech_WD';
+const updatesChannel = '@ssbotz';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -62,12 +62,12 @@ const checkSubscription = async (userId) => {
 // Updated sendStartMessage to include image
 const sendStartMessage = (chatId) => {
     bot.sendPhoto(chatId, 'https://i.imgur.com/6cUMqLc.jpeg', {
-        caption: `👋 *Welcome to TeraBox Video Player Bot!*\n\n*Paste your TeraBox link and watch your video instantly—no TeraBox app needed!*\n\nPlease subscribe to our [Updates Channel](https://t.me/Opleech_WD) and click /start again to begin using the bot.`,
+        caption: `👋 *Welcome to TeraBox Video Player Bot!*\n\n*Paste your TeraBox link and watch your video instantly—no TeraBox app needed!*\n\nPlease subscribe to our [Updates Channel](https://t.me/ssbotz) and click /start again to begin using the bot.`,
         parse_mode: 'Markdown',
         reply_markup: {
             inline_keyboard: [
-                [{ text: '〇 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐓𝐨 𝐔𝐬𝐞 𝐌𝐞 〇', url: 'https://t.me/Opleech_WD' }],
-                [{ text: '🔗 How to use Bot 🔗', url: 'https://t.me/WOODcraft_Mirror_Zone/43' }]
+                [{ text: '〇 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐓𝐨 𝐔𝐬𝐞 𝐌𝐞 〇', url: 'https://t.me/ssbotz' }],
+                [{ text: '🔗 How to use Bot 🔗', url: 'https://t.me/ssnotz' }]
             ]
         }
     }).catch(error => {
@@ -87,7 +87,7 @@ bot.onText(/\/start/, async (msg) => {
                 parse_mode: 'Markdown',
                 reply_markup: {
                     inline_keyboard: [
-                        [{ text: "✨ Any Help? ✨", url: "https://t.me/+XfmrBSzTyRFlZTI9" }]
+                        [{ text: "✨ Any Help? ✨", url: "https://t.me/ssbotz" }]
                     ]
                 }
             }).catch(error => {
@@ -181,7 +181,7 @@ bot.on('message', async (msg) => {
             bot.sendMessage(chatId, `❌ *That is not a valid TeraBox link.*`, {
                 reply_markup: {
                     inline_keyboard: [
-                        [{ text: "✨ Read the message ✨", url: "https://t.me/WOODcraft_Mirror_Zone/44" }]
+                        [{ text: "✨ Read the message ✨", url: "https://t.me/ssbotz" }]
                     ]
                 }
             }).catch(error => {
@@ -224,7 +224,7 @@ bot.on('message', async (msg) => {
                 reply_markup: {
                     inline_keyboard: [
                         [{ text: 'ᢱ Watch/Download ⎙', url: downloadUrl }],
-                        [{ text: '✨ Read the message ✨', url: 'https://t.me/WOODcraft_Mirror_Zone/44' }]
+                        [{ text: '✨ Read the message ✨', url: 'https://t.me/ssbotz' }]
                     ]
                 }
             }).catch(error => {
